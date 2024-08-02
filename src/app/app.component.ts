@@ -36,14 +36,14 @@ export class AppComponent implements OnInit {
     return 'success';
   }
 
-  handleResult(result: string): void {
-    const successUrl = 'https://your-flutter-app/success';
-    const failureUrl = 'https://your-flutter-app/failure';
-
-    const url = result === 'success' ? successUrl : failureUrl;
-
-    this.http.get(url).subscribe(response => {
-      console.log('Flutter WebView updated:', response);
-    });
+  handleResult(result: string) {
+    const successUrl = 'https://vflow.vahanacloud.com/vflow-feature_RM/#/main/1693390379964132/exp';
+    const failureUrl = 'https://vflow.vahanacloud.com/vflow-feature_RM/#/main/1693390379964132/exp';
+    let request = {
+      url: ''
+    };
+    request.url = result === 'success' ? successUrl : failureUrl;
+    console.log("request",request);
+    return request;
   }
 }
