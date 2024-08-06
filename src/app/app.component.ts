@@ -42,8 +42,6 @@ export class AppComponent implements OnInit {
     let request = {
       url: ''
     };
-    request.url = result === 'success' ? successUrl : failureUrl;
-    console.log("request",request);
-    return request;
+
   }
 }
